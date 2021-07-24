@@ -6,7 +6,7 @@ let scene, camera, renderer, object;
 
 function init(){
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x2a003b);
+    scene.background = new THREE.Color(0xffffff);
 
     camera = new THREE.PerspectiveCamera(
         75,
@@ -44,11 +44,12 @@ let loader = new STLLoader();
 loader.load('/3dmodels/RC_Plane.STL', (model)=>{
     object = new THREE.Mesh(
         model,
-        new THREE.MeshLambertMaterial({color: 0x00ff00})
+        new THREE.MeshLambertMaterial({color: 0xff6700})
     );
-    object.scale.set(0.1, 0.1, 0.1);
-    object.position.set(0,-5,0);
-    object.rotation.x = -Math.PI/2;
+    object.scale.set(0.03, 0.03, 0.05);
+    object.position.set(0,-10,-10);
+    object.rotation.x = -Math.PI/4;
+   // object.rotation.y = Math.PI;
     init();
 });
 
