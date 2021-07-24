@@ -41,7 +41,7 @@ function animate(){
 }
 
 let loader = new STLLoader();
-loader.load('/3dmodels/Intergalactic_Spaceships_Version_2.stl', (model)=>{
+loader.load('/3dmodels/RC_Plane.STL', (model)=>{
     object = new THREE.Mesh(
         model,
         new THREE.MeshLambertMaterial({color: 0x00ff00})
